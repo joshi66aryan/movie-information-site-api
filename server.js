@@ -37,6 +37,6 @@ app.post('/changepassword', (req, res) => { changepassword.handleChangePassword(
 
 
 
-app.listen(3000,()=>{
-	console.log("app is running in port 3000");
+app.listen(process.env.PORT || 3000, ()=>{
+	console.log(`app is running in port ${process.env.PORT} `);
 })
