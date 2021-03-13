@@ -29,7 +29,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.get('/',(req,res)=>{res.send(database.users);})
+app.get('/',(req,res)=>{res.send(/*database.users*/)})
 app.post('/login', (req, res) => { login.handleSignin(req, res, psql, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister(req, res, psql , bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, psql) })
